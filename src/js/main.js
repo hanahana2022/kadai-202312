@@ -6,7 +6,7 @@ sliderFunc();
 //gsap animation
 scrollAnimeFunc();
 
-//headerの高さを超えたらmix-blende-modeを追加し識字性を上げる処理
+//headerの高さを超えたらmix-blende-modeを追加し、色を反転させ識字性を上げる処理
 document.addEventListener('DOMContentLoaded', function () {
   var header = document.querySelector('.c-header');
   var headerHeight = header.offsetHeight;

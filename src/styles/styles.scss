@@ -62,7 +62,7 @@ html.lenis {
 }
 
 //mouse storker
-.spotlight {
+.c-spotlight {
   position: fixed;
   top: 0;
   left: 0;
@@ -479,7 +479,28 @@ html.lenis {
     background-color: $dark-gray-color;
   }
 }
-
+.c-stripe-elem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-image: linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25%,
+    transparent 26%,
+    transparent 50%,
+    transparent 51%,
+    transparent 75%,
+    transparent 76%,
+    transparent 100%
+  );
+  background-size: 70px 70px;
+  transition: background-image 0.5s ease;
+}
 //--------------------------------------
 //works
 .p-works {
@@ -510,6 +531,9 @@ html.lenis {
       .c-works-grid__txt {
         font-size: 1.6rem;
       }
+      .c-works-grid__link .c-stripe-elem {
+        background-size: 100px 100px;
+      }
     }
   }
 
@@ -518,32 +542,32 @@ html.lenis {
     position: relative;
     overflow: hidden;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      background-image: linear-gradient(
-        -45deg,
-        transparent,
-        transparent 25%,
-        transparent 26%,
-        transparent 50%,
-        transparent 51%,
-        transparent 75%,
-        transparent 76%,
-        transparent 100%
-      );
-      background-size: 100px 100px;
-      opacity: 0;
-      transition: all 1s;
-    }
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: 1;
+    //   background-image: linear-gradient(
+    //     -45deg,
+    //     transparent,
+    //     transparent 25%,
+    //     transparent 26%,
+    //     transparent 50%,
+    //     transparent 51%,
+    //     transparent 75%,
+    //     transparent 76%,
+    //     transparent 100%
+    //   );
+    //   background-size: 70px 70px;
+    //   opacity: 0;
+    //   transition: all 1s;
+    // }
 
-    &:hover::before {
+    &:hover .c-stripe-elem {
       background-image: linear-gradient(
         -45deg,
         transparent,
@@ -555,11 +579,9 @@ html.lenis {
         #fff 76%,
         #fff 100%
       );
-      background-size: 100px 100px;
       // mix-blend-mode: soft-light;
       animation: anime_stripe 10s infinite linear;
       animation-delay: 0.5s;
-      opacity: 1;
     }
   }
 

@@ -122,14 +122,14 @@ export function scrollAnimeFunc() {
 
   //マウスストーカー
 
-  const spotlight = document.querySelector('.spotlight');
+  const spotlight = document.querySelector('.c-spotlight');
   const targetClassName = 'spotlightElem';
   let hoverTimer;
 
   function updateSpotlightBackground(e) {
     const targetElement = e.target.closest(`.${targetClassName}`);
     let backgroundStyle;
-    let rgbaValue = 0.8;
+    let rgbaValue = 0.7;
 
     clearTimeout(hoverTimer);
 
@@ -149,7 +149,7 @@ export function scrollAnimeFunc() {
       backgroundStyle = `radial-gradient(80px 80px at ${e.clientX}px ${e.clientY}px, transparent, rgba(255,241,236,${rgbaValue}) 90px, rgba(0,0,0 ,${rgbaValue}) 100px)`;
     } else {
       // クラスが見つからなかった場合
-      backgroundStyle = `radial-gradient(30px 30px at ${e.clientX}px ${e.clientY}px, transparent, rgba(255,255,255,0.6) 40px, rgba(0,0,0,0) 50px)`;
+      backgroundStyle = `radial-gradient(30px 30px at ${e.clientX}px ${e.clientY}px, transparent, rgba(255,255,255,0.3) 40px, rgba(0,0,0,0) 50px)`;
     }
 
     // GSAPを使用して背景を更新
@@ -161,6 +161,33 @@ export function scrollAnimeFunc() {
   }
 
   document.addEventListener('mousemove', updateSpotlightBackground);
+
+  //scaleX+フェードインアニメ
+  const scaleXelem = gsap.utils.toArray('.scalexElem');
+  scaleXelem.forEach((item) => {
+    gsap.fromTo(
+      item,
+      {
+        autoAlpha: 0,
+        y: 20,
+        x: -10,
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        x: 0,
+        delay: 0.1,
+        ease: 'bounce.out',
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: item,
+          scrub: 4,
+          start: 'top 80%',
+          end: '+=200',
+        },
+      }
+    );
+  });
 
   //scaleY+フェードインアニメ
   const scaleYelem = gsap.utils.toArray('.scaleyElem');
@@ -191,41 +218,12 @@ export function scrollAnimeFunc() {
     );
   });
 
-  //scaleX+フェードインアニメ
-  const scaleXelem = gsap.utils.toArray('.scalexElem');
-  scaleXelem.forEach((item) => {
-    gsap.fromTo(
-      item,
-      {
-        autoAlpha: 0,
-        y: 20,
-        x: -10,
-      },
-      {
-        autoAlpha: 1,
-        y: 0,
-        x: 0,
-        delay: 0.1,
-        ease: 'bounce.out',
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: item,
-          scrub: 4,
-          start: 'top 80%',
-          end: '+=200',
-        },
-      }
-    );
-  });
-  //帯フェードインアニメ
+  // 帯フェードインアニメ
   const skew = gsap.utils.toArray('.c-bg-elem');
   skew.forEach((item) => {
     gsap.fromTo(
       item,
-      {
-        scale: 1,
-        x: 0,
-      },
+      { scale: 1, x: 0 },
       {
         x: '100%',
         delay: 0.1,
