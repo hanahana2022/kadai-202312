@@ -1,12 +1,22 @@
 # 課題
 
-## 動作確認
+課題は[Astro](https://docs.astro.build)環境で制作しております。
+
+## Astro 環境の起動方法
+
+```
+npm install でインストールしてください。
+npm run dev で開発環境が立ち上がります。
+ターミナルに表示されたLocal URLにアクセスしてください。
+```
+
+## 動作確認環境
 
 以下環境で動作確認しております。
 
 ```
-windows11  / node.js v18.15.0
-macbook pro / node.js v18.14.1 / npm 9.3.1
+windows11  / node.js v18.15.0 / npm 9.5.0
+macOS Ventura 13.6.1 / node.js v18.14.1 / npm 9.3.1
 ```
 
 ## フォルダー構成
@@ -16,11 +26,11 @@ macbook pro / node.js v18.14.1 / npm 9.3.1
 ```text
 /
 ├── public/
-│   └── 画像ファイル
+│   └── 画像ファイルを格納
 ├── src/
 │   ├── components/
 │   │   └── astroコンポーネントファイル
-│   ├── css/
+│   ├── styles/
 │   │   └── scssファイル
 │   ├── data/
 │   │   └── jsonファイル
@@ -32,20 +42,3 @@ macbook pro / node.js v18.14.1 / npm 9.3.1
 │       └── astroページファイル
 └── package.json
 ```
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

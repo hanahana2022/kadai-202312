@@ -1,3 +1,4 @@
+//build用設定ファイル
 import { defineConfig } from 'astro/config';
 import path from 'path';
 
@@ -23,4 +24,5 @@ export default defineConfig({
       },
     },
   },
+  base: 'dist', //ルート変更
 });

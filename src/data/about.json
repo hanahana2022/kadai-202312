@@ -1,14 +1,14 @@
 [
   {
-    "image": "/about/about_us_01.jpg"
+    "image": "images/about/about_us_01.jpg"
   },
   {
-    "image": "/about/about_us_02.jpg"
+    "image": "images/about/about_us_02.jpg"
   },
   {
-    "image": "/about/about_us_03.jpg"
+    "image": "images/about/about_us_03.jpg"
   },
   {
-    "image": "/about/about_us_04.jpg"
+    "image": "images/about/about_us_04.jpg"
   }
 ]
