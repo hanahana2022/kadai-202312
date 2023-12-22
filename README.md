@@ -6,6 +6,7 @@
 
 ```
 windows11  / node.js v18.15.0
+macbook pro / node.js v18.14.1 / npm 9.3.1
 ```
 
 ## フォルダー構成
