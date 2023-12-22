@@ -1,0 +1,48 @@
+[
+  {
+    "title": "紡ぐ TSUMUGU：Japan Art & Culture",
+    "category": { "web": "/category/web/" },
+    "image": "/works/works_01.jpg",
+    "text": "コロナ禍においても美術鑑賞が可能な、デジタルミュージアムをWebサイトで実現"
+  },
+  {
+    "title": "海老乃家",
+    "category": { "web": "/category/web/" },
+    "image": "/works/works_02.jpg",
+    "text": "海老専門店「海老乃家」のリニューアル／ECサイト構築"
+  },
+  {
+    "title": "はじめよう！SEIBU生活。",
+    "category": {
+      "Web": "/category/web/",
+      "Graphics": "/category/graphics/",
+      "Illustration": "/category/illustration/"
+    },
+    "image": "/works/works_03.jpg",
+    "text": "西武鉄道「SEIBU PRINCE CLUBカード<br>セゾン新規入会キャンペーン」のクリエイティブ制作"
+  },
+  {
+    "title": "BATTEKI",
+    "category": {
+      "Web": "/category/web/",
+      "Logo": "/category/logo/"
+    },
+    "image": "/works/works_04.jpg",
+    "text": "韓国人学生と日本企業を結ぶ、<br>グローバル人材スカウトサービス「BATTEKI」"
+  },
+  {
+    "title": "モンスターストライク",
+    "category": { "Movie": "/category/movie/" },
+    "image": "/works/works_05.jpg",
+    "text": "「ノア 獣神化」訴求動画制作 "
+  },
+  {
+    "title": "山善家電",
+    "category": {
+      "Web": "/category/web/",
+      "Logo": "/category/logo/"
+    },
+    "image": "/works/works_06.jpg",
+    "text": "「くらしの中の“発見”」を表現するECサイト・映像ロゴ制作 "
+  }
+]

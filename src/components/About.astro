@@ -1,0 +1,32 @@
+---
+import data from '../data/about.json';//jsonデータの読み込み
+---
+
+ <section class="p-about">
+  <h2 class="c-heading scaleyElem">
+    <img src="/heading_about_us.png"srcset="/heading_about_us@2x.png 2x"width="173" height="24" alt="anout us">
+  </h2>
+    
+    <div class="splide" aria-label="スライダー">
+      <div class="splide__track">
+        <div class="splide__list">
+          {
+            data.map((item) => (
+              <div class="splide__slide scaleyElem">
+                <span class="c-bg-elem c-bg-elem--wh"></span>
+                <img src={item.image} alt="" />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="p-more-link-block-02">
+      <a href="#" class="c-more-link-02 scaleyElem">
+        <span class="c-more-link-02__heading"><img src="/learn_more.png"srcset="/learn_more@2x.png 2x"width="76" height="11" alt="続きを読む"></span>
+        <span class="c-more-link-02__circle"><img src="/arrow_bk.png"srcset="/arrow_bk@2x.png 2x"width="25" height="21" alt=""></span>
+      </a>
+    </div>
+ </section>
+  

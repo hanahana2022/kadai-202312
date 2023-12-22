@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="株式会社ナディアは東京・札幌を拠点とした制作会社です。数多くのWeb制作実績とサイト運用ノウハウを強みとしたクリエイティブに加え、さらに映像制作・編集からシステム・アプリ開発や3DCG、グラフィックデザインまで、ワンストップのソリューションをご提供します。"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+	<link rel="shortcut icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Poppins:wght@200;300;400;500&family=Raleway:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css"
+  />
+  </head>
+
+  <body>
+    <slot />
+    
+    <script src="../js/main.js"></script>
+  </body>
+</html>
+<style lang="scss">
+  @import '../css/styles.scss';
+</style>
