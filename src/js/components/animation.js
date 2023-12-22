@@ -1,5 +1,5 @@
-import { gsap, ScrollTrigger } from "gsap/all";
-import Lenis from "@studio-freight/lenis";
+import { gsap, ScrollTrigger } from 'gsap/all';
+import Lenis from '@studio-freight/lenis';
 
 export function scrollAnimeFunc() {
   gsap.registerPlugin(ScrollTrigger);
@@ -16,17 +16,17 @@ export function scrollAnimeFunc() {
   requestAnimationFrame(raf);
 
   //ローディングアニメーション
-  window.addEventListener("load", loader);
+  window.addEventListener('load', loader);
 
   function loader() {
     const TLLOAD = gsap.timeline();
     //タイムライン
-    TLLOAD.to(".c-loading", {
+    TLLOAD.to('.c-loading', {
       autoAlpha: 0,
       duration: 1,
-      ease: "expo.out",
+      ease: 'expo.out',
     }).fromTo(
-      ".c-header",
+      '.c-header',
       {
         autoAlpha: 0,
         y: -30,
@@ -44,9 +44,9 @@ export function scrollAnimeFunc() {
       const headings = gsap.utils.toArray(selector);
       headings.forEach((item) => {
         var text = item.textContent;
-        item.innerHTML = "";
-        text.split("").forEach(function (c) {
-          item.innerHTML += "<span>" + c + "</span>";
+        item.innerHTML = '';
+        text.split('').forEach(function (c) {
+          item.innerHTML += '<span>' + c + '</span>';
         });
 
         //タイムライン
@@ -64,27 +64,27 @@ export function scrollAnimeFunc() {
             delay: 0.05,
             stagger: {
               grid: [10, 20],
-              from: "end",
-              axis: "x",
+              from: 'end',
+              axis: 'x',
               amount: 0.5,
             },
-            ease: "expo.out",
+            ease: 'expo.out',
             duration: 0.8,
           },
-          "start"
+          'start'
         );
       });
     }
     //文字アニメーション関数の呼び出し
-    animateText(".c-hero-text__top", -80);
-    animateText(".c-hero-text__bottom", 80);
+    animateText('.c-hero-text__top', -80);
+    animateText('.c-hero-text__bottom', 80);
 
     //タイムライン
     TLLOAD.fromTo(
-      ".c-scroll",
+      '.c-scroll',
       {
         autoAlpha: 0,
-        y: "100%",
+        y: '100%',
       },
       {
         autoAlpha: 1,
@@ -96,7 +96,7 @@ export function scrollAnimeFunc() {
   }
   //スクロールに連動するskew animation
   let proxy = { skew: 0 },
-    skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"),
+    skewSetter = gsap.quickSetter('.skewElem', 'skewY', 'deg'),
     clamp = gsap.utils.clamp(-5, 5); //傾き
 
   ScrollTrigger.create({
@@ -107,7 +107,7 @@ export function scrollAnimeFunc() {
         gsap.to(proxy, {
           skew: 0,
           duration: 1,
-          ease: "power3",
+          ease: 'power3',
           overwrite: true,
           onUpdate: () => skewSetter(proxy.skew),
         });
@@ -115,15 +115,15 @@ export function scrollAnimeFunc() {
     },
   });
 
-  gsap.set(".skewElem", {
-    transformOrigin: "right center",
+  gsap.set('.skewElem', {
+    transformOrigin: 'right center',
     force3D: true,
   });
 
   //マウスストーカー
 
-  const spotlight = document.querySelector(".spotlight");
-  const targetClassName = "spotlightElem";
+  const spotlight = document.querySelector('.spotlight');
+  const targetClassName = 'spotlightElem';
   let hoverTimer;
 
   function updateSpotlightBackground(e) {
@@ -142,7 +142,7 @@ export function scrollAnimeFunc() {
         gsap.to(spotlight, {
           duration: 1,
           background: backgroundStyle,
-          ease: "power3",
+          ease: 'power3',
         });
       }, 700);
 
@@ -156,14 +156,14 @@ export function scrollAnimeFunc() {
     gsap.to(spotlight, {
       duration: 1,
       background: backgroundStyle,
-      ease: "power3",
+      ease: 'power3',
     });
   }
 
-  document.addEventListener("mousemove", updateSpotlightBackground);
+  document.addEventListener('mousemove', updateSpotlightBackground);
 
   //scaleY+フェードインアニメ
-  const scaleYelem = gsap.utils.toArray(".scaleyElem");
+  const scaleYelem = gsap.utils.toArray('.scaleyElem');
   scaleYelem.forEach((item) => {
     gsap.fromTo(
       item,
@@ -179,20 +179,20 @@ export function scrollAnimeFunc() {
         y: 0,
         x: 0,
         delay: 0.1,
-        ease: "bounce.out",
+        ease: 'bounce.out',
         duration: 1.5,
         scrollTrigger: {
           trigger: item,
           scrub: 4,
-          start: "top 80%",
-          end: "+=200",
+          start: 'top 80%',
+          end: '+=200',
         },
       }
     );
   });
 
   //scaleX+フェードインアニメ
-  const scaleXelem = gsap.utils.toArray(".scalexElem");
+  const scaleXelem = gsap.utils.toArray('.scalexElem');
   scaleXelem.forEach((item) => {
     gsap.fromTo(
       item,
@@ -206,36 +206,36 @@ export function scrollAnimeFunc() {
         y: 0,
         x: 0,
         delay: 0.1,
-        ease: "bounce.out",
+        ease: 'bounce.out',
         duration: 1.5,
         scrollTrigger: {
           trigger: item,
           scrub: 4,
-          start: "top 80%",
-          end: "+=200",
+          start: 'top 80%',
+          end: '+=200',
         },
       }
     );
   });
   //帯フェードインアニメ
-  const skew = gsap.utils.toArray(".c-bg-elem");
+  const skew = gsap.utils.toArray('.c-bg-elem');
   skew.forEach((item) => {
     gsap.fromTo(
       item,
       {
-        scale: 1.1,
+        scale: 1,
         x: 0,
       },
       {
-        x: "100%",
+        x: '100%',
         delay: 0.1,
-        ease: "circ.out",
+        ease: 'circ.out',
         duration: 1,
         scrollTrigger: {
           trigger: item,
           scrub: 3,
-          start: "top 70%",
-          end: "+=500",
+          start: 'top 70%',
+          end: '+=500',
         },
       }
     );
