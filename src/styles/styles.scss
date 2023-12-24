@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
@@ -97,7 +97,7 @@ html.lenis {
 
 //navi
 .c-nav {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
   font-size: 1.8rem;
   letter-spacing: 1px;
@@ -128,7 +128,7 @@ html.lenis {
     text-decoration: none;
 
     &::after {
-      content: "contact";
+      content: 'contact';
       display: block;
       transform: translateY(0);
     }
@@ -167,7 +167,7 @@ html.lenis {
     &:nth-of-type(1) {
       a {
         &::after {
-          content: "solution";
+          content: 'solution';
         }
       }
     }
@@ -175,7 +175,7 @@ html.lenis {
     &:nth-of-type(2) {
       a {
         &::after {
-          content: "works";
+          content: 'works';
         }
       }
     }
@@ -183,7 +183,7 @@ html.lenis {
     &:nth-of-type(3) {
       a {
         &::after {
-          content: "about us";
+          content: 'about us';
         }
       }
     }
@@ -191,7 +191,7 @@ html.lenis {
     &:nth-of-type(4) {
       a {
         &::after {
-          content: "recruit";
+          content: 'recruit';
         }
       }
     }
@@ -199,7 +199,7 @@ html.lenis {
     &:nth-of-type(5) {
       a {
         &::after {
-          content: "news";
+          content: 'news';
         }
       }
     }
@@ -216,7 +216,7 @@ html.lenis {
   text-align: center;
   position: relative;
   overflow: hidden;
-
+  min-width: 1280px;
   img {
     width: 100%;
   }
@@ -258,7 +258,7 @@ html.lenis {
   left: 4%;
   bottom: 6%;
   font-size: 6.7rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: #fff;
   text-align: left;
@@ -317,7 +317,7 @@ html.lenis {
   width: 100%;
 
   &::before {
-    content: "";
+    content: '';
     width: 100%;
     height: 1px;
     background-color: #000;
@@ -370,7 +370,7 @@ html.lenis {
   }
 
   &::before {
-    content: "";
+    content: '';
     width: 100%;
     height: 1px;
     background-color: #000;
@@ -424,7 +424,7 @@ html.lenis {
   }
 
   &::before {
-    content: "";
+    content: '';
     width: 100%;
     height: 1px;
     background-color: #fff;
@@ -461,7 +461,7 @@ html.lenis {
 
 //--------------------------------------
 .c-bg-elem {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -492,7 +492,7 @@ html.lenis {
 }
 
 .c-stripe-elem::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -625,7 +625,7 @@ html.lenis {
     top: -50px;
     left: 0;
     display: block;
-    content: "";
+    content: '';
     width: 68%;
     height: 50px;
     background-color: $dark-gray-color;
@@ -650,7 +650,7 @@ html.lenis {
     transition: 0.5s;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -10px;
       left: 0;
@@ -661,7 +661,7 @@ html.lenis {
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -10px;
       left: 0;
