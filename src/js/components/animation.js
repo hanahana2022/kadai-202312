@@ -219,8 +219,8 @@ export function scrollAnimeFunc() {
   });
 
   // 帯フェードインアニメ
-  const skew = gsap.utils.toArray('.c-bg-elem');
-  skew.forEach((item) => {
+  const fadeIn = gsap.utils.toArray('.c-bg-elem');
+  fadeIn.forEach((item) => {
     gsap.fromTo(
       item,
       { scale: 1, x: 0 },
